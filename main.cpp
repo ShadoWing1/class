@@ -1,46 +1,39 @@
 #include <iostream>
-    
-int main(int argc, char const *argv[])
+
+class ucgenAlan
 {
-    int a = 0;
-    std::cout << "hosgeldiniz <3 \n" << "\n" << "Oyuna Gir: 1 \n" << "Oyundan Cık: 0 \n";
-    std::cout << ": ";std::cin >> a;
-    bool b;
-    if(a == 0)
-    {
-        bool b = false;
-        std::cout << "Oyundan Cikiliyor...\n";
-    }
+    public:
+        float genislik = 0;
+        float yukseklik = 0;
+        float alan = 0 ;
 
-    else if(a == 1)
-    {
-        bool b = false;
-    }
-    else
-    {
-        bool b = true;
-    }
-
-    while(b = true)
-    {
-        std::cout << "Anlasilamadi \n";
-        
-        std::cout << ": ";std::cin >> a;
-
-        if(a==1 || a==0)
+        void bilgi()
         {
-            break;
+            std::cout << "genisliği girin: ";
+            std::cin >> genislik;
+            
+            std::cout << "yüksekliği  girin: ";
+            std::cin >> yukseklik;
         }
-    
-        if((a == 0) == 0)
+
+        void sonuc ()
         {
-            if((a == 1) == 0)
-            {
-                b = false;
-            }
+            alan = (genislik * yukseklik) / 2;
+            std::cout << alan << "\n";
         }
+
+};
+
+int main()
+{
+    ucgenAlan ucgen1;
+    ucgen1.bilgi();
+
+
+
+
+    std::cout << "1.ucgen: ";
+    ucgen1.sonuc();
     
-    }
-
-
+    return 0;
 }
